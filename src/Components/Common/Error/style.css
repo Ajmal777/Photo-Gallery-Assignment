@@ -1,0 +1,9 @@
+.error{
+    text-align: center;
+}
+.error-code{
+    color: red;
+}
+.error-message, .error-data{
+    font-size: 1.2rem;
+}

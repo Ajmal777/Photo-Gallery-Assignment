@@ -3,11 +3,12 @@ import Search from "../Components/Search";
 import Gallery from "../Components/Gallery";
 import Loading from "../Components/Common/Loading";
 import fetchData from "../Functions/fetchData";
+import Error from "../Components/Common/Error";
 
 function Home() {
   const [loading, setLoading] = useState(true);
   const [images, setImages] = useState("");
-
+  const [error, setError] = useState(false);
   useEffect(() => {
     async function loadImages() {
       setLoading(true);
@@ -16,6 +17,7 @@ function Home() {
         setImages(res.data);
         setLoading(false);
       } catch (err) {
+        setError(err);
         setLoading(false);
         console.log(err);
       }
@@ -26,14 +28,15 @@ function Home() {
 
   return (
     <>
-      {loading ? (
-        <Loading />
-      ) : (
+      {loading && 
+        <Loading />}
+      {error && <Error error={error} />}
+      { !loading && !error &&
         <>
           <Search />
           <Gallery images={images} />
         </>
-      )}
+      }
     </>
   );
 }
