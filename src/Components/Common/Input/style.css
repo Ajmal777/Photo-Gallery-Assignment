@@ -1,0 +1,30 @@
+div.input {
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  flex-grow: 1;
+  border: 1px solid #ECECEC;
+  background-color: #FAFAFA;
+}
+
+input[type="text"] {
+  flex-grow: 1;
+  border: none;
+  font-size: 1rem;
+  background-color: transparent;
+}
+
+.prefix {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+::placeholder{
+  font-size: 0.75rem;
+}
+input[type="text"]:focus {
+  outline: none;
+}

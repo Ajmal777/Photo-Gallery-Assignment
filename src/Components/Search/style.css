@@ -1,0 +1,20 @@
+.search{
+    background: url('../../../Resources/daniel-leone-v7daTKlZzaw-unsplash.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    padding: 7.5rem 1rem;
+}
+
+.content{
+    width: 75%;
+    color: var(--color-white);
+    text-align: center;
+    max-width: 800px;
+}
+
+.content > p{
+    font-weight: 500;
+    font-size: 0.9rem;
+}

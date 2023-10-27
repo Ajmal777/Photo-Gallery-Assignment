@@ -1,0 +1,7 @@
+.tag{
+    color: var(--color-dark-grey);
+    background-color: #ECECEC;
+    padding: 0.25rem 0.5rem;
+    width: fit-content;
+    border-radius: 5px;
+}
