@@ -31,7 +31,7 @@ const MyModal = ({ open, setOpen, id }) => {
         setError(err);
         setLoading(false);
       });
-  }, []);
+  }, [id]);
 
   return (
     <>

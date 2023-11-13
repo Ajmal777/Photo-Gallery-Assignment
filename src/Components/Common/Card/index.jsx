@@ -7,6 +7,7 @@ import MyModal from "../MyModal";
 
 const Card = memo(({ data }) => {
   const [open, setOpen] = useState(false);
+
   function getOrientaion(width, height) {
     const ratio = width / height;
     if (ratio < 0.76) return "portrait";
