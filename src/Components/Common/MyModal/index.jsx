@@ -19,7 +19,7 @@ const MyModal = ({ open, setOpen, id }) => {
       .get(`https://api.unsplash.com/photos/${id}`, {
         headers: {
           Authorization:
-            "Client-ID zaCFc9U1redoHt3KTFRe2_OnCYTVOEU58-F1uvA4Wp8",
+            `Client-ID ${import.meta.env.VITE_API_KEY_2}`,
         },
       })
       .then((res) => {

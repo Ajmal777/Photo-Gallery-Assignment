@@ -11,10 +11,9 @@ const fetchData = async (q) => {
             per_page: 15        //reduce this so that the request limit per hour for unsplash API doesn't deplete quickly
         },
         headers: {
-            Authorization: 'Client-ID JRXIy2Ey4-qunIK78bNkqzpbs9PLvze7OoXHZUbEWBA'
+            Authorization: `Client-ID ${import.meta.env.VITE_API_KEY_1}`,
         }
     });
-    console.log(data);
     return data;
   }
   catch(err){
